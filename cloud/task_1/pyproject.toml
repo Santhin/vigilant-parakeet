@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "task_1"
+version = "0.1.0"
+description = ""
+authors = ["Piotr Sierkin <psierkin@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.68.1"
+elasticsearch = {extras = ["async"], version = "^7.15.0"}
+requests = "^2.26.0"
+uvicorn = "^0.15.0"
+psycopg2 = "^2.9.1"
+databases = {extras = ["postgresql"], version = "^0.5.2"}
+
+[tool.poetry.dev-dependencies]
+jupyter = "^1.0.0"
+notebook = "^6.4.4"
+nest-asyncio = "^1.5.1"
+shortuuid = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

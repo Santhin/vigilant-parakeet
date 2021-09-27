@@ -15,3 +15,8 @@ Aplikacja zawiera trzy moduły:
     c) niech backend odpali się na samym końcu
 3. Zapisuj logi na swoim dysku
 ```
+
+
+```
+http://localhost:9201/reservations/_search?pretty=true
+```

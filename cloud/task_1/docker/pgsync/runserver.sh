@@ -4,10 +4,9 @@
 ./wait-for-it.sh redis:6379 -t 60
 ./wait-for-it.sh kibana:5601 -t 60
 
+
 python schema.py --config schema.json
 python data.py --config schema.json
 
 bootstrap --config schema.json
-pgsync --config schema.json --daemon 
-
-
+pgsync --config schema.json --daemon

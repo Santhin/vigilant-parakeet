@@ -43,7 +43,7 @@ def healthcheck():
 
 @app.get('/db/all', tags=["database"])
 async def get_rows():
-    output = await database.fetch_all("select * from specie")
+    output = await database.fetch_all("select * from bookings")
     return output
 
 
@@ -54,10 +54,10 @@ async def index():
 
 @app.get("/es/all", tags=["elastisearch"])
 async def get_all():
-    output = await es.search(index="campaign", body={"query": {"match_all": {}}})
+    output = await es.search(index="reservations", body={"query": {"match_all": {}}})
     return output
 
 @app.get("/es/{id}", tags=["elastisearch"])
 async def get_one(id: int):
-    output = await es.get(index="campaign", id=id)
+    output = await es.get(index="reservations", id=id)
     return output
