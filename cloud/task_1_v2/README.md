@@ -18,5 +18,22 @@ Aplikacja zawiera trzy moduły:
 
 
 ```
-http://localhost:9201/reservations/_search?pretty=true
+docker-compose up
+docker-compose logs > logs.txt
 ```
+
+
+https://gist.github.com/ErikNovak/186e6021cf30db9160c673ee3145629f#file-logstash-pg-es-md
+https://medium.com/@emreceylan/how-to-sync-postgresql-data-to-elasticsearch-572af15845ad
+
+
+```
+poetry export -f requirements.txt --output api/requirements.txt
+```
+
+```
+https://github.com/deviantony/docker-elk/blob/main/docker-stack.yml
+```
+
+https://www.youtube.com/watch?v=TyixiRWJGmw
+https://www.youtube.com/watch?v=PCvVCjC-wp0
